@@ -1,15 +1,15 @@
 #!/bin/zsh
 
 if [ ! "$SHELL" = "/bin/zsh" ]; then
-  chsh -s /bin/zsh
+  sudo chsh -s /bin/zsh
 fi
 
-git submodule init
-git submodule update
+fontsDir=~/.local/share/fonts
+mkdir -p $fontsDir
+#curl -fLo $fontsDir/"DejaVu Sans Mono for Powerline Nerd Font Complete.ttf" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20for%20Powerline%20Nerd%20Font%20Complete.ttf?raw=true"
+curl -fLo $fontsDir/"SourceCodePro Powerline Awesome Regular.ttf" "https://github.com/gabrielelana/awesome-terminal-fonts/blob/patching-strategy/patched/SourceCodePro%2BPowerline%2BAwesome%2BRegular.ttf?raw=true"
 
-cd ${0%/*}
-
-fonts/install.sh
+fc-cache -f $fontsDir
 
 dotfiles=(
     .zshrc
