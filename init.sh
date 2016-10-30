@@ -11,6 +11,8 @@ curl -fLo $fontsDir/"SourceCodePro Powerline Awesome Regular.ttf" "https://githu
 
 fc-cache -f $fontsDir
 
+cd ${0%/*}
+
 dotfiles=(
     .zshrc
 )
