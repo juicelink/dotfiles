@@ -1,7 +1,0 @@
-HISTFILE=~/.zshistory       # enable history saving on shell exit
-setopt INC_APPEND_HISTORY          # append rather than overwrite history file.
-HISTSIZE=1200                  # lines of history to maintain memory
-SAVEHIST=1200                  # lines of history to maintain in history file.
-setopt EXTENDED_HISTORY        # save timestamp and runtime information
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt SHARE_HISTORY

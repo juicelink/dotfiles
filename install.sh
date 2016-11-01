@@ -16,11 +16,16 @@ packages=(
   libxt-dev
   python-dev
   python3-dev
+  python-pip
   ruby-dev
   lua5.1
   lua5.1-dev
   libperl-dev
   checkinstall
+  xclip
+  tmux
+  tmuxinator
+  autojump
 )
 
 sudo apt-get install ${packages[@]}
@@ -52,3 +57,5 @@ sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 1
 sudo update-alternatives --set editor /usr/bin/vim
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
 sudo update-alternatives --set vi /usr/bin/vim
+
+pip install pygments autoenv
