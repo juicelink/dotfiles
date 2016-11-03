@@ -12,12 +12,14 @@ curl -fLo $fontsDir/"SourceCodePro Powerline Awesome Regular.ttf" "https://githu
 fc-cache -f $fontsDir
 
 cd ${0%/*}
+curDir=`pwd`
 
-dotfiles=(
-    .zshrc
-)
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.config/nvim/dein
+rm -f installer.sh
 
-dir=$(pwd | sed -e "s%$HOME/%%g")
-ln -sf $(echo ${dotfiles[@]} | sed -e "s%^%$dir/%g" -e "s% % $dir/%g") ~
+ln -sf $curDir/.zshrc ~/.zshrc
+mkdir -p ~/.config/nvim
+ln -sf $curDir/init.vim ~/.config/nvim/init.vim
 
 . ~/.zshrc
