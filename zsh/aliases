@@ -1,3 +1,4 @@
-alias ls="ls --color=auto"
-alias ccat=colorize
+type vi >/dev/null || alias vi=vim
+
 alias dh="dirs -v"
+alias h=history

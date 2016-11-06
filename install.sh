@@ -2,6 +2,7 @@
 
 sudo apt-get remove vim vim-runtime gvim vim-tiny vim-common vim-gui-common vim-nox
 sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo add-apt-repository ppa:aacebedo/fasd
 sudo apt-get update
 
 packages=(
@@ -28,9 +29,9 @@ packages=(
   libperl-dev
   checkinstall
   xclip
+  realpath
   tmux
-  tmuxinator
-  autojump
+  fasd
   neovim
 )
 
@@ -43,4 +44,4 @@ sudo update-alternatives --config vim
 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 sudo update-alternatives --config editor
 
-pip install pygments autoenv
+sudo gem install tmuxinator
